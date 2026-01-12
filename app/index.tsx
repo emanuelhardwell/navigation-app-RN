@@ -3,8 +3,8 @@ import { Text, View } from "react-native";
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
+    <View className="mt-20">
+      <Text className="text-3xl color-blue-900 text-center">App</Text>
     </View>
   );
 };
