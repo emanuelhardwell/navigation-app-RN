@@ -1,3 +1,4 @@
+import ButtonCustom from "@/components/ButtonCustom";
 import { Link } from "expo-router";
 import React from "react";
 import { View } from "react-native";
@@ -7,7 +8,21 @@ const HomeScreen = () => {
   return (
     <SafeAreaView>
       <View className="mt-5 mx-3">
-        <Link className="mt-3" href={"/products"}>
+        <Link href={"/products"} asChild>
+          <ButtonCustom color="primary" onLongPress={() => {}}>
+            Product
+          </ButtonCustom>
+        </Link>
+
+        {/* <ButtonCustom
+          color="primary"
+          onPress={() => router.push("/products")}
+          onLongPress={() => {}}
+        >
+          Product
+        </ButtonCustom> */}
+
+        {/*  <Link className="mt-3" href={"/products"}>
           Product
         </Link>
         <Link className="mt-3" href={"/profile"}>
@@ -15,7 +30,7 @@ const HomeScreen = () => {
         </Link>
         <Link className="mt-3" href={"/settings"}>
           Settings
-        </Link>
+        </Link> */}
       </View>
     </SafeAreaView>
   );
