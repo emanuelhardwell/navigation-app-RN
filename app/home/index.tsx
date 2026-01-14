@@ -1,5 +1,5 @@
 import ButtonCustom from "@/components/ButtonCustom";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import React from "react";
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -14,13 +14,23 @@ const HomeScreen = () => {
           </ButtonCustom>
         </Link>
 
-        {/* <ButtonCustom
+        <ButtonCustom
+          className="mt-2"
           color="primary"
           onPress={() => router.push("/products")}
           onLongPress={() => {}}
         >
-          Product
-        </ButtonCustom> */}
+          Product 2
+        </ButtonCustom>
+
+        <ButtonCustom
+          className="mt-2"
+          variant="text-only"
+          onPress={() => router.push("/products")}
+          onLongPress={() => {}}
+        >
+          Product 3
+        </ButtonCustom>
 
         {/*  <Link className="mt-3" href={"/products"}>
           Product
