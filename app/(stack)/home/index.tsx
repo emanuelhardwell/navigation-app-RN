@@ -17,19 +17,19 @@ const HomeScreen = () => {
         <ButtonCustom
           className="mt-2"
           color="primary"
-          onPress={() => router.push("/products")}
+          onPress={() => router.push("/profile")}
           onLongPress={() => {}}
         >
-          Product 2
+          Profile
         </ButtonCustom>
 
         <ButtonCustom
           className="mt-2"
           variant="text-only"
-          onPress={() => router.push("/products")}
+          onPress={() => router.push("/settings")}
           onLongPress={() => {}}
         >
-          Product 3
+          Settings
         </ButtonCustom>
 
         {/*  <Link className="mt-3" href={"/products"}>
