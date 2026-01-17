@@ -1,13 +1,31 @@
+import { product } from "@/store/products.store";
+import { Link } from "expo-router";
 import React from "react";
-import { Text, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const ProductsScreen = () => {
   return (
     <SafeAreaView>
       <View>
-        <Text>ProductsScreen</Text>
+        <Text className="mb-5 text-center color-primary text-2xl">
+          Products list
+        </Text>
       </View>
+      <FlatList
+        data={product}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View className="m-5">
+            <Text className="font-work-black">{item.title}</Text>
+            <Text>{item.description}</Text>
+            <View className="flex-row justify-between">
+              <Text className="color-red-600">{`$ ${item.price}`}</Text>
+              <Link href={`/products/${item.id}`}>Ver detalles</Link>
+            </View>
+          </View>
+        )}
+      />
     </SafeAreaView>
   );
 };
