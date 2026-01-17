@@ -7,6 +7,7 @@ const LayoutDrawer = () => {
   return (
     <Drawer
       screenOptions={{
+        headerShown: false,
         headerShadowVisible: false,
         headerTintColor: "purple",
         drawerActiveTintColor: "green",
@@ -33,6 +34,16 @@ const LayoutDrawer = () => {
           title: "Schedule title",
           drawerIcon: ({ size, color }) => (
             <Ionicons name="calendar-clear-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="tab" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: "Tab",
+          title: "Tab title",
+          drawerIcon: ({ size, color }) => (
+            <Ionicons name="server-outline" size={size} color={color} />
           ),
         }}
       />
