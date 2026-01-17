@@ -8,7 +8,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView>
       <View className="mt-5 mx-3">
-        <Link href={"/tab/(stack)/products"} asChild>
+        <Link href={"/drawer/tab/(stack)/products"} asChild>
           {/* forma 1 */}
           <ButtonCustom color="primary" onLongPress={() => {}}>
             Product
@@ -18,7 +18,7 @@ const HomeScreen = () => {
         <ButtonCustom
           className="mt-2"
           color="primary"
-          onPress={() => router.push("/tab/profile")} /* forma 2 */
+          onPress={() => router.push("/drawer/tab/profile")} /* forma 2 */
           onLongPress={() => {}}
         >
           Profile
@@ -27,7 +27,7 @@ const HomeScreen = () => {
         <ButtonCustom
           className="mt-2"
           variant="text-only"
-          onPress={() => router.push("/tab/settings")}
+          onPress={() => router.push("/drawer/tab/settings")}
           onLongPress={() => {}}
         >
           Settings

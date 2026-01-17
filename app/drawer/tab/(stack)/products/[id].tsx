@@ -10,7 +10,7 @@ const ProductDetail = () => {
   const productDetail = product.find((p) => p.id === params.id);
 
   if (!productDetail) {
-    return <Redirect href={"/tab/home"} />;
+    return <Redirect href={"/drawer/tab/home"} />;
   }
 
   return (
