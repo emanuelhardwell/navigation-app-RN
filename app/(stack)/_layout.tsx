@@ -3,7 +3,13 @@ import React from "react";
 
 const LayoutStack = () => {
   return (
-    <Stack>
+    <Stack
+      screenOptions={{
+        headerShadowVisible: false,
+        animation: "fade_from_bottom",
+        contentStyle: { backgroundColor: "white" },
+      }}
+    >
       <Stack.Screen name="home/index" options={{ title: "Home" }} />
       <Stack.Screen name="products/index" options={{ title: "Product" }} />
       <Stack.Screen name="profile/index" options={{ title: "Profile" }} />
