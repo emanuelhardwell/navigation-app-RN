@@ -38,7 +38,7 @@ const LayoutDrawer = () => {
         }}
       />
       <Drawer.Screen
-        name="tab" // This is the name of the page and must match the url from root
+        name="(tab)" // This is the name of the page and must match the url from root
         options={{
           drawerLabel: "Tab",
           title: "Tab title",
