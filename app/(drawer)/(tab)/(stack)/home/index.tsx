@@ -1,10 +1,17 @@
 import ButtonCustom from "@/components/ButtonCustom";
-import { Link, router } from "expo-router";
+import { DrawerActions } from "@react-navigation/native";
+import { Link, router, useNavigation } from "expo-router";
 import React from "react";
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
+  const handleToggle = () => {
+    navigation.dispatch(DrawerActions.toggleDrawer);
+  };
+
   return (
     <SafeAreaView>
       <View className="mt-5 mx-3">
@@ -31,6 +38,10 @@ const HomeScreen = () => {
           onLongPress={() => {}}
         >
           Settings
+        </ButtonCustom>
+
+        <ButtonCustom className="mt-2" color="secondary" onPress={handleToggle}>
+          Open Menu
         </ButtonCustom>
 
         {/*  <Link className="mt-3" href={"/products"}>
