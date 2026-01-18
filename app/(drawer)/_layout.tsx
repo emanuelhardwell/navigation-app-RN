@@ -7,7 +7,7 @@ const LayoutDrawer = () => {
   return (
     <Drawer
       screenOptions={{
-        headerShown: false,
+        //headerShown: false,
         headerShadowVisible: false,
         headerTintColor: "purple",
         drawerActiveTintColor: "green",
@@ -40,6 +40,7 @@ const LayoutDrawer = () => {
       <Drawer.Screen
         name="(tab)" // This is the name of the page and must match the url from root
         options={{
+          headerShown: false,
           drawerLabel: "Tab",
           title: "Tab title",
           drawerIcon: ({ size, color }) => (
