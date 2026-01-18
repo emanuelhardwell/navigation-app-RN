@@ -4,10 +4,11 @@ import React from "react";
 
 const LayoutTab = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "blue", headerShown: false }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: "blue" }}>
       <Tabs.Screen
         name="(stack)"
         options={{
+          headerShown: false,
           title: "Stack",
           tabBarIcon: ({ color }) => (
             <Ionicons size={28} name="person-add-outline" color={color} />
