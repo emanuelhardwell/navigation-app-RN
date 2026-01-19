@@ -1,0 +1,40 @@
+import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
+import React from "react";
+
+const LayoutTab = () => {
+  return (
+    <Tabs screenOptions={{ tabBarActiveTintColor: "blue" }}>
+      <Tabs.Screen
+        name="(stack)"
+        options={{
+          headerShown: false,
+          title: "Stack",
+          tabBarIcon: ({ color }) => (
+            <Ionicons size={28} name="person-add-outline" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="home/index"
+        options={{
+          title: "Home",
+          tabBarIcon: ({ color }) => (
+            <Ionicons size={28} name="home" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="favorites/index"
+        options={{
+          title: "Favorites",
+          tabBarIcon: ({ color }) => (
+            <Ionicons size={28} name="cog" color={color} />
+          ),
+        }}
+      />
+    </Tabs>
+  );
+};
+
+export default LayoutTab;
